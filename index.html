@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="side_div">
+      <img src="images\bg-main-desktop.png" alt="" class="side_bg">
+      <div class="card_front_div">
+        <img src="images\bg-card-front.png" alt="" class="card_front">
+        <div class="card_front_detail">
+          <img src="images\card-logo.svg" alt="" class="card_front_logo">
+          <p class="card_front_num">0000 0000 0000 0000</p>
+          <div class="row">
+            <p class="card_front_name">dummy name</p>
+            <p class="card_front_date">
+              <span class="card_month">00</span>/<span class="card_year">00</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card_back_div">
+        <img src="images\bg-card-back.png" alt="" class="card_back">
+        <p class="card_back_cvc">000</p>
+      </div>
+    </div>
+
+    <div class="form_div">
+      <form action="" novalidate>
+        <div class="card_name_div column">
+          <label for="card_name">Cardholder name</label>
+          <input type="text" class="card_name" required>
+          <span class="card_name_error error"></span>
+        </div>
+        <div class="card_num_div column">
+          <label for="card_num">Card Number</label>
+          <input class="card_num" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="eg: 1234 5678 9123 0000" required>
+          <span class="card_num_error error"></span>
+        </div>
+        <div class="last_form_div">
+          <div class="date_div column">
+            <label for="date">Exp. Date(MM/YY)</label>
+           <div class="row_date">
+            <input type="number" class="date_month" min="01" max="12" required>
+            <input type="number" class="date_year" min="1950" max="2023" required>
+           </div>
+           <span class="date_error error"></span>
+          </div>
+          <div class="cvc_div column">
+            <label for="cvc">Cvc</label>
+            <input type="number" max="999" class="cvc" required>
+            <span class="cvc_error error"></span>
+          </div>
+        </div>
+        <button class="submit">Confirm</button>
+      </form>
+      <div class="complete_div">
+        <img src="images\icon-complete.svg" alt="complete" class="completeSvg">
+        <p class="complete_ty">Thank You</p>
+        <p class="complete_text">We've added your card details</p>
+        <button class="continue">Continue</button>
+      </div>
+    </div>
+  </main>
+
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Anish</a>.
+  </div>
+
+  <script src="index.js" defer></script>
+</body>
+</html>
